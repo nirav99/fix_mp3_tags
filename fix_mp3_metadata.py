@@ -46,10 +46,10 @@ def is_file_valid(file_name: str, expected_type: str)-> bool:
 	
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-f', '--file', type=str, help="Name of mp3 file", default=None)
-	parser.add_argument('-a', '--artist', type=str, help="Artist name", default=None)
-	parser.add_argument('-l', '--album', type=str, help="Album name", default=None)
-	parser.add_argument('-t', '--title', type=str, help="Song title", default=None)
+	parser.add_argument('-f', '--file', type=str, help="Name of mp3 file", required=True)
+	parser.add_argument('-a', '--artist', type=str, help="Artist name", required=True)
+	parser.add_argument('-l', '--album', type=str, help="Album name", required=True)
+	parser.add_argument('-t', '--title', type=str, help="Song title", required=True)
 	parser.add_argument('-y', '--year', type=str, help="Year", default=None)
 	parser.add_argument('-i', '--image', type=str, help="Artist image", default=None)
 	args = parser.parse_args()
@@ -64,14 +64,6 @@ if __name__ == "__main__":
 
 	if args.image is not None and (is_file_valid(args.image, "jpg") == False):
 		print(f"Error: {args.image} is not a valid JPG file")
-		params_valid = False
-
-	if args.title is None:
-		print(f"Error: title must be specified")
-		params_valid = False
-
-	if args.artist is None:
-		print(f"Error: artist must be specified")
 		params_valid = False
 
 	if args.year is not None and args.year.isdigit() == False:
