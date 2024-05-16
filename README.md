@@ -1,11 +1,9 @@
 # fix_mp3_tags
 Allows the user to specify different meta data values in MP3 file such as artist name, song title, album name, year and the artist image.
 The artist image and the year are optional, rest of the parameters must be specified.
-
-[[_TOC_]]
 ________
 
-###Setup
+### Setup
 Make sure you are using python3
 ```bash
 python3 --version
@@ -18,7 +16,7 @@ pip3 install -r requirements.txt
 ```
 ________
 
-###Usage
+### Usage
 
 ```bash
  python fix_mp3_metadata.py -h  
