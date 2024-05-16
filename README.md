@@ -19,7 +19,7 @@ ________
 ### Usage
 
 ```bash
- python fix_mp3_metadata.py -h  
+python fix_mp3_metadata.py -h  
 usage: fix_mp3_metadata.py [-h] [-f FILE] [-a ARTIST] [-l ALBUM] [-t TITLE]
                            [-y YEAR] [-i IMAGE]
 
